@@ -1,0 +1,199 @@
+previous weeks
+
+study of proxmox setup
+converted bash script to python
+converted script to use proxmox API instead of qm command
+wrote requirements and milestones
+made diagram for system a sitemap for web app
+study of previous code development
+converted pinglibrary to use API
+modified ping test to be more complete
+wrote baseLibrary
+
+
+
+5/11
+wireshark caps to understand why commands sometimes dont work 
+Research about proxmox firewall, snapshots and containers vs VMs
+
+12/11
+changes in proxmox scripts related to VM operations
+studied workings of proxmox firewall - https://ciaduck.blogspot.com/2020/04/proxmox-firewall-and-isolating-vms.html?m=1
+wrote proxmox script to create firewall rules to isolate VMs
+made some tests on snapshot speeds with and without ram
+
+19/11
+started work on flask
+fixed some errors in firewall api script
+restructed project folders
+implemented some basic endpoints to interact with proxmox via the flask application
+WSGI Research - https://www.fullstackpython.com/wsgi-servers.html
+Gunicorn experiments on 'teacher' vm
+Study of flask basics - https://hackersandslackers.com/series/build-flask-apps/
+
+
+26/11
+More work on flask (more restructuring, blueprints, etc.)
+Integrated proxmox api calls with flask application
+Working on implementing nornir tasks with flask application
+
+03/12
+GNS3 Web - explore (still in beta phase, altough from experimenting it seems feature complete)
+Clone before evaluation - explore (cloning active VM is possible, but not with RAM which is what we want, not possible on containers with RAM, not with backups neither snapshots )
+Explore use of containers in conjunction with GNS3 Web (possible, just install gns3-server on container)
+Make more than 1 user use a single gns3 server (possible, but no user isolation, everything is shared, not desirable in exam setting)
+Worked on site front end (just basic html and redirecting to gns3 web directly from site) 
+Containers - cant seem to use ubuntu 24.04/10 (needs to update proxmox packages but always gives error) ((FIXED, had to change proxmox repository settings to update packages))
+
+10/12
+Write some documentation about flask app, proxmox api calls and nornir usage.
+
+Containers - Setting up a template GNS3 Container (QEMU guest agent cant be run on containers, priviledged or not. is this a problem?
+it actually can, by passing the host's /dev/kvm/ to the containers but doing so leaves open a big attack vector...
+https://forum.proxmox.com/threads/kvm-inside-lxc-container.54168/
+Switching from QEMU to docker within GNS3 seems doable, abandoning linux support in GNS3 doesn't...)
+
+NETMIKO send_command might be the cause for tests sometimes not working "randomly" (fast_cli set to false, after some testing, problem seems taken care of... )
+
+Containers - Contrary to VMs, IP seems to change frequently, solve this or workaround it? (non-issue)
+
+
+17/12
+
+GNS3 - multiple gns3 web server instances running on a single VM?(no, all instances can still access each other's files)
+
+Docker in GNS3(still limited, alternative would be running any QEMU VM directly on proxmoxVE, good suggestion for future work)
+
+Created a template GNS3-Server, provisioned with a working templates for a cisco router, switch, linux machine and VPCS, base on ubuntu 24.10
+Did not use GNS3-VM due to it not being any easier to setup than our GNS3-Server.
+
+Create a exercise ( problem definition (html markdown), tests to run (allow multiple (allow granular grading over a sets of steps)) ,with ability to import from file(csv for example), include gns3 topology with ability to insert pre configurations to be made after import)
+
+
+2/01
+(ongoing) create a exercise ( problem definition (html markdown), tests to run (allow multiple (allow granular grading over a sets of steps)) ,with ability to import from file(csv for example), include gns3 topology with ability to insert pre configurations to be made after import)
+- added a database to the flask application
+- worked on creating a vm for a student when required(not finished)
+- refined database uml definition
+- added login and signup capabilites(currently disabled for ease of development)
+
+8/01:
+
+VM creation
+- fixed a few errors in database implementation
+- wrote code to clone template vm into work vm using event listeners (after_insert)
+- rewrote code to not use event listeners, now fires manually, as event listeners were causing some sequences, and were perhaps overkill
+
+implemented proxmox authentication token storage, reducing # of calls to API
+
+small documentation work
+
+14/01:
+(ongoing) create a exercise ( problem definition (html markdown), tests to run (allow multiple (allow granular grading over a sets of steps)) ,with ability to import from file(csv for example), include gns3 topology with ability to insert pre configurations to be made after import)
+- Focus on exercise definition form
+- Client side form (separation of concerns)
+
+Thin provisioning research
+WSGI research
+cleaned up some code related to proxmox API interaction
+some Un-hardcoding of ping test
+added some input capabilites to ping and traceroute test
+Re-implemented changes to template gns3-server VM, specifically telnet backdoor to linuxvm
+need gns3-webclient-pack to be able to connect to spice console of linuxvm
+reenable login capabilites
+made the "connect to work environment", "start" and "stop" buttons interact with the correct vm, given a user and exercise
+
+Readded telnet backdoor to linuxvm (work by previous student)
+discuss this (was necessary for some reason, now isn't?)
+SPICE needed for gui, need to add a telnet backdoor, or a better way
+For SPICE connection by way of gns3-web, machine connecting to gns3 remotely must have gns3-webclient-pack installed locally
+Insert code changes in 
+/usr/share/gns3/gns3-server/lib/python3.12/site-packages/gns3server/compute/qemu/qemu_vm.py
+and 
+/usr/share/gns3/gns3-server/lib/python3.12/site-packages/gns3server/compute/base_node.py
+
+switch doesnt have ttl option...? check if its because IOS version?
+Switch has Cisco IOS V15.2 , no ttl option
+Router has Cisco IOS V12.4 , has ttl option
+
+tried cloning 20 vms based on vm 110, only managed 4 clones before proxmox threw an error:
+ " Error: 500 Server Error: got no worker upid - start worker failed for url: https://localhost:8006/api2/json/nodes/pve1/qemu/110/clone "
+Find a way to increase number of workers, but even that wont help for much
+Listen for the error, stop and continue when one or more jobs are completed
+... cant seem to replicate the error...
+
+21/01:
+figure out configuration of template VM (base gns3-vm -> provision with gns3-topology -> run provided commands -> convert into template -> clone for use)
+
+automated the following steps:
+- Create new vm from base gns3-server vm
+- import gns3 project into new vm
+- transform new vm into a template
+- record new template data into db
+- create the necessary work vms with the new template vm as base
+
+in a first iteration, sleep() was used to give some time to proxmox/gns3 between steps
+aftewards checks were implemented using proxmox and gns3 API, this not only makes sure that we can proceed forward but also makes for less time idling uncessarily
+however, the checks done using the gns3 api are not reliable, for example when checking if project is imported sucessfully it will claim yes, even if its still ongoing
+
+04/02:
+
+generated unique hostnames for each vm
+implement nornir commands in form
+started writing
+
+convert proxmox_api and gns3_api into nornir
+- in the case of gns3_api there isnt much gain in converting to nornir, as the main benefit would be paralelization and calls to gns3 are sequential in nature.
+- in the case of proxmox_api at first glance there would be benefit in paralelizing vm cloning
+
+11/02:
+work on generic module - flask app now can sucessfully use module for multiple hosts with multiple commands
+added logging and cleaned code of gns3_api and proxmox_api
+make a delete exercise function that deletes an exercise and all related work vms and template vm
+test vm cloning with different vm quantities and measure time 
+
+
+18/02:
+exercise create get hostnames from gns3project file
+make vm cloning non sequential and paralelizable -celery
+
+25/02:
+io problems? disks were not being properly removed and eventually filesystem started becoming clogged
+YEP, now vm cloning with celery seems to be much faster 
+make vm cloning non sequential and paralelizable -celery proxmox got no worker upid (also explain other approaches and why i chose the one i did)
+gunicorn workers test with varying types
+
+05/03:
+finish celery
+
+11/03:
+document the need to delete files in archive of pve and how disk removal sometimes fails silently
+vg files politic
+disks try to replicate and eventually report and research
+httpx async isolated test
+integrate httpx into flask, removing celery
+
+18/03:
+Quart migration ? quart migration by itself is easy, quart-extensions (quart-sqlalchemy, quart-auth) are a PITA
+fast-api evaluation?
+
+25/03:
+disregard quart, migrate to fastapi
+
+01/04:
+final fastapi migration work
+writing
+
+08/04:
+make table of contents for dissertation 
+LDAP proxmox and fastapi
+request validation button in interface and functionality in code
+
+inlist student in exercise and create vm 
+delist student and delete vm
+
+15/04:
+more LDAP, create users with or without privileges
+code clean up for gns3 and proxmox api interactions
+implement retrying logic
+verify exercises student is inlisted in

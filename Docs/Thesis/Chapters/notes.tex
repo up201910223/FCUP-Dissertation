@@ -1,0 +1,125 @@
+\unsure{daqui para baixo, é para reutilizar em outras secçoes e sair desta}
+\section{My experience of flask quart and fastapi, add later somwhere}
+  
+
+
+  \subsection{FastAPI}
+    Dependency injection can be of particular importance for maintainabilty and extensibility as we have already seen in the previous 
+    sections with Flask extensions that were already integrated into the project, and that would have to be reimplemented from scratch 
+    in Quart, were the project to go down that path. 
+    
+    Ultimately, the project transitioned to FastAPI. While the migration to FastAPI involved a fair amount of effort, this 
+    was anticipated from the outset—unlike Quart, which had initially seemed easier but presented unforeseen difficulties, 
+    it resulted in better runtime performance, improved concurrency handling, and a cleaner overall structure, when compared 
+    to the previous Flask implementation with Celery integration.
+
+
+\subsection{Celery}
+
+  \begin{algorithm}
+    \caption{Calling a Celery Task and Getting the Result}\label{celery-call-result}
+    \begin{algorithmic}[1]
+      \State \textbf{from} celery \textbf{import} Celery
+      \State
+      \State \textbf{app} = Celery('tasks', broker='redis://localhost:6379/0', backend='redis://localhost:6379/0')
+      \State
+      \State \textbf{@app.task}
+      \State \textbf{def} hello():
+      \State \hspace{1em} \textbf{return} 'hello world'
+      \State
+      \State \textbf{result} = hello.delay()
+      \State \textbf{print}(result.get())
+    \end{algorithmic}
+  \end{algorithm}
+
+  To execute a task, a Celery task function must be called using the \textit{delay()} method, which will return a result object. 
+  This result object can be used to check the status of the task and to retrieve the result once it is available.
+
+  Celery supports horizontal scaling by design, allowing multiple worker pools to run on separate physical or\ac{vm}s. 
+  This makes it especially effective for handling growing workloads—for example, processing email newsletters for an expanding 
+  user base.
+
+  In addition to basic task execution, Celery provides advanced features such as retry policies, task chaining, prioritization, 
+  and timeouts. However, these benefits come with added complexity in deployment and maintenance, especially regarding broker 
+  reliability, result back-end persistence, and worker supervision.
+
+  Furthermore, Celery clients and workers introduce a non-negligible overhead in terms of CPU and memory usage, even when 
+  idle, as they must maintain persistent connections to the broker and periodically perform health checks or heartbeats. 
+  This can be a concern in resource-constrained environments or during development.This overhead became especially evident 
+  during early integration tests.
+
+  As the project evolved, it became increasingly clear that Celery's benefits did not outweigh its resource and 
+  architectural costs for the current use case. This realization prompted an exploration of more lightweight asynchronous 
+  alternatives, eventually culminating in a migration to FastAPI—an \ac{asgi}-compliant framework with native async capabilities 
+  and simpler concurrency management.
+
+
+\subsection{Linux}
+  Linux is a core component of this project, as it is the kernel of all operating systems used to host all the services provided.
+
+  \begin{itemize}
+    \item \textbf{Containerized Web Application} - The web application is hosted in an \ac{lxc} on \ac{pve}. Since \ac{lxc}s share 
+    the host kernel, the containerized web application benefits from efficient resource usage while still being isolated from the host system.
+    \item \textbf{Virtual Machines hosting GNS3} \ac{pve} also hosts\ac{vm}s running Linux-based Ubuntu \ac{gns3} servers. 
+    These VMs provide students with environments to configure and test network topologies, benefiting from the 
+    flexibility of full virtualization through \ac{kvm}, giving them the ability to virtualize any type of network device.
+    Students only interact with these \ac{vm}s via the \ac{gns3} web Interface. Students interact with these \ac{vm}s using a browser, 
+    accessing the gns3-server instance running on them. Consequently the students can interact with their work environments without having to 
+    interact with the underlying operating system, and so these machines can forgo a desktop environment entirely, which frees up resources 
+    leading to better scalability.
+    \item \textbf{\ac{pve}} - \ac{pve} is a Linux-based open-source platform for enterprise-level virtualization. It is based
+    on the Debian Linux distribution.
+  \end{itemize}
+
+\section{Implemented Features}
+
+  The current proof-of-concept implementation delivers core functionality through the following capabilities:
+
+  \subsection{User Management}
+    \begin{itemize}
+        \item \textbf{Registration}: Local account creation with credential storage
+        \item \textbf{Authentication}: Hybrid login system supporting both:
+        \begin{itemize}
+            \item Local account credentials
+            \item LDAP directory service integration
+        \end{itemize}
+    \end{itemize}
+
+  \subsection{Exercise Workflow}
+    \begin{itemize}
+        \item \textbf{Exercise Enrollment}: Dynamic provisioning of per-user work environments
+        \begin{itemize}
+            \item Automatically creates GNS3 VM instances for enrolled users
+            \item Associates VMs with specific exercise topologies
+            \item Handles cleanup via VM deletion when users delist
+        \end{itemize}
+        \item \textbf{Exercise Creation}: Instructor interface for lab setup
+        \begin{itemize}
+            \item Accepts pre-configured GNS3 topology files (.gns3project)
+            \item Configures validation commands per network device
+        \end{itemize}
+    \end{itemize}
+
+  \subsection{Student Interaction}
+    \begin{itemize}
+        \item \textbf{VM Control}: Basic instance management
+        \begin{itemize}
+            \item Power on/off functionality for assigned work VMs
+            \item Console access to network devices within the topology
+        \end{itemize}
+        \item \textbf{Configuration Validation}: Limited automated checking
+        \begin{itemize}
+            \item Supports ping and traceroute verification
+            \item Processes instructor-defined test sequences
+        \end{itemize}
+    \end{itemize}
+
+  \subsection{Current Technical Constraints}
+    The system has intentional limitations in its current stage:
+    \begin{itemize}
+        \item Validation restricted to basic connectivity tests
+        \item Static topology requirements (pre-built GNS3 projects)
+        \item Manual evaluation triggering by students
+        \item No performance benchmarking capabilities
+    \end{itemize}
+

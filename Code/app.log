@@ -1,0 +1,30 @@
+2025-11-12 19:39:56,971 [INFO] app.services.proxmox_auth: Attempting to login into realm docentes with user up201910223
+2025-11-12 19:39:57,029 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@docentes auth: [Errno 2] No such file or directory
+2025-11-12 19:39:57,035 [INFO] app.services.proxmox_auth: Attempting to login into realm alunos with user up201910223
+2025-11-12 19:39:57,048 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@alunos auth: [Errno 2] No such file or directory
+2025-11-12 19:39:57,052 [INFO] app.services.proxmox_auth: Failed to login with user up201910223
+2025-11-12 19:40:15,082 [INFO] app.services.proxmox_auth: Attempting to login into realm docentes with user up201910223
+2025-11-12 19:40:15,084 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@docentes auth: [Errno 2] No such file or directory
+2025-11-12 19:40:15,085 [INFO] app.services.proxmox_auth: Attempting to login into realm alunos with user up201910223
+2025-11-12 19:40:15,086 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@alunos auth: [Errno 2] No such file or directory
+2025-11-12 19:40:15,087 [INFO] app.services.proxmox_auth: Failed to login with user up201910223
+2025-11-12 19:40:21,095 [INFO] app.services.proxmox_auth: Attempting to login into realm docentes with user up201910223
+2025-11-12 19:40:21,098 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@docentes auth: [Errno 2] No such file or directory
+2025-11-12 19:40:21,100 [INFO] app.services.proxmox_auth: Attempting to login into realm alunos with user up201910223
+2025-11-12 19:40:21,102 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@alunos auth: [Errno 2] No such file or directory
+2025-11-12 19:40:21,105 [INFO] app.services.proxmox_auth: Failed to login with user up201910223
+2025-11-12 19:46:17,999 [INFO] app.services.proxmox_auth: Attempting to login into realm docentes with user up201910223
+2025-11-12 19:46:18,038 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@docentes auth: [Errno 2] No such file or directory
+2025-11-12 19:46:18,041 [INFO] app.services.proxmox_auth: Attempting to login into realm alunos with user up201910223
+2025-11-12 19:46:18,050 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@alunos auth: [Errno 2] No such file or directory
+2025-11-12 19:46:18,051 [INFO] app.services.proxmox_auth: Failed to login with user up201910223
+2025-11-12 19:46:32,869 [INFO] app.services.proxmox_auth: Attempting to login into realm docentes with user up201910223
+2025-11-12 19:46:32,870 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@docentes auth: [Errno 2] No such file or directory
+2025-11-12 19:46:32,871 [INFO] app.services.proxmox_auth: Attempting to login into realm alunos with user up201910223
+2025-11-12 19:46:32,872 [ERROR] app.services.proxmox_auth: Unexpected error during up201910223@alunos auth: [Errno 2] No such file or directory
+2025-11-12 19:46:32,872 [INFO] app.services.proxmox_auth: Failed to login with user up201910223
+2025-11-12 19:47:11,519 [INFO] app.services.proxmox_auth: Attempting to login into realm docentes with user johndoe
+2025-11-12 19:47:11,520 [ERROR] app.services.proxmox_auth: Unexpected error during johndoe@docentes auth: [Errno 2] No such file or directory
+2025-11-12 19:47:11,520 [INFO] app.services.proxmox_auth: Attempting to login into realm alunos with user johndoe
+2025-11-12 19:47:11,521 [ERROR] app.services.proxmox_auth: Unexpected error during johndoe@alunos auth: [Errno 2] No such file or directory
+2025-11-12 19:47:11,521 [INFO] app.services.proxmox_auth: Failed to login with user johndoe

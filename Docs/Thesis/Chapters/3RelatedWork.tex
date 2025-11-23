@@ -1,0 +1,159 @@
+% Chapter Template
+
+% Main chapter title
+%\chapter[toc version]{doc version}
+\chapter{Related Work}
+
+% Short version of the title for the header
+%\chaptermark{version for header}
+
+% Chapter Label
+% For referencing this chapter elsewhere, use \ref{ChapterTemplate}
+\label{Chapter3RelatedWork}
+
+% Write text in here
+% Use \subsection and \subsubsection to organize text
+
+This chapter focuses on placing our project within the context of existing solutions and related work. The primary 
+goal of this project is to develop a system capable of automatically assessing network topologies by validating device 
+configurations and executing tests across a virtual network.
+
+While automated assessment systems are well established in the field of programming education, receiving student-submitted 
+code and running it against predefined test cases, equivalent systems for network exercises are far less common. Tools like 
+Mooshak \cite{Leal2003567} and similar platforms have proven effective for evaluating programming assignments and are widely adopted in academic 
+settings.
+
+At first glance, adapting automated assessment approaches to network topologies may seem straightforward. 
+However, network assessment introduces a set of challenges like validating the configuration of multiple devices in a distributed and 
+stateful environment. These devices may differ in type, vendor, or firmware version, requiring tailored communication methods and output 
+validation strategies for each case.
+
+This chapter explores existing tools, in particular, Mooshak and Packet Tracer, highlighting their capabilities, limitations, and how our  
+project builds upon or diverges from them.
+
+\section{Automated Assessment Systems}
+    While not directly related, programming assessment systems are the main inspiration for this project. They are widely
+    deployed in universities and other educational institutions. These systems receive, as input, code from students and 
+    subsequently run tests on it, outputting a score and even being configurable to provide students the first test case that 
+    they failed in, guiding students to the solution without handing it out.
+
+    A key differentiator of the proposed system is its support for multiple valid configurations across several devices to achieve 
+    a correct solution to a network exercise. In contrast, many existing automated assessment systems, particularly those used in 
+    programming, assume a single expected output for a given input, which does not accommodate the variability and flexibility 
+    often found in networking scenarios.
+
+    
+    One key difference is that automated assessment systems dont always provide a working environment for the 
+    students to test their code, owing to the fact that students might prefer to user their own development environment for 
+    initial development and testing. However setting up a networking lab can be a daunting task for students, especially when 
+    they are just starting out. By providing a pre-configured environment, students can focus on learning the concepts and skills 
+    they need to succeed in their studies, rather than spending time troubleshooting their setup. Another key difference is that 
+    automated assessment systems dont have to interact with distributed systems or deal with matters of concurrency as is the case 
+    in a network administration assignment, as to validate it, it will be necessary to interact with multiple devices, even if 
+    they are virtually hosted on the same physical machine.
+
+    \subsection{Mooshak and lessons learned}
+
+        In our context, in the\ac{dcc}, Mooshak is commonly deployed to be used in the context of classes, exams and even 
+        programming contests.
+
+        Mooshak is a web-based system for managing programming contests and also to act as an automatic judge of programming 
+        contests \cite{Leal2003567}. It supports a variety of programming languages like Java, C, etc. Under each contest, students 
+        will find one more problem definitions each containing varying sets of test cases in input-output pairs. After submiting 
+        their solution, the system will compile and run the code against an instructor-provided solution and compare the outputs obtained 
+        for the same inputs giving a score based on the the amount of test cases passed.
+
+        Mooshak provides a structured approach to test coding and problem solving skills. It begins by offering a problem statement 
+        coupled with an optional image and an example test case, in the form of input and expected output, as can be seen in 
+        Figure~\ref{fig:mooshak1}
+
+        \begin{figure}
+            \centering
+            \includegraphics[width=.95\linewidth]
+                {3RelatedWork/mooshak1.png}
+            \caption{A screenshot of a mooshak exercise page}
+        \hfill
+        \label{fig:mooshak1}
+        \end{figure}
+
+        Users can submit their proposed solution by uploading a file with their code. The system then evaluates the provided solution 
+        against multiple pre-defined test cases, validating the output of the submitted code against the output of a known-good code solution, 
+        giving feedback in the form of a score based on the number of test cases passed. The system may also be configured to have time and/or 
+        memory constraints, to ensure that temporal and spatial complexity are also taken into account.
+    
+        All of these, serve to provide a thorough evaluation of the student's solution, which can help guide a student to better
+        their coding and problem solving skills.
+
+        The system can also differentiate between differing types of errors, such as not giving the expected output, poorly 
+        formatted output, failure to compile or even exceeding the time limits.
+        Mooshak also includes some features designed to drive competition between students, like a real time leaderboard and
+        the ability to have more than 100\% of the score for a given contest.
+
+        However, the system has limitations. It relies on plain text files for test cases and performs character-by-character output 
+        comparison. This strict matching can result in false negatives when a student's output is functionally correct but formatted 
+        differently than expected.
+
+\section{Cisco Packet Tracer}
+
+    Cisco Packet Tracer is a network \textbf{simulation} tool developed by Cisco Systems, widely used in academic environments 
+    to teach networking concepts and prepare students for certifications such as the Cisco Certified Network Associate (CCNA). 
+    It offers a visual interface, seen in Figure~\ref{fig:packet_tracer1}, for building and simulating virtual network topologies 
+    using a variety of Cisco devices, including routers, switches, and end devices.
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=.95\linewidth]
+            {3RelatedWork/packet_tracer1.png}
+        \caption{A screenshot of a Packet Tracer exercise}
+    \hfill
+    \label{fig:packet_tracer1}
+    \end{figure}
+
+    Packet Tracer includes an "Activity Wizard". This feature allows for the creation of assignments with automated assessment. 
+    To use this, two topologies must be provided, namely a starting network, used as a starting point, and an answer network, 
+    containing the intended configurations. From this a list of all the settings applied to the answer network can be toggled 
+    for validation and a custom amount of points can be assigned to each validation, as can be seen in Figure~\ref{fig:packet_tracer2}. 
+    
+    \begin{figure}
+        \centering
+        \includegraphics[width=.95\linewidth]
+            {3RelatedWork/packet_tracer2.png}
+        \caption{A screenshot of a Packet Tracer's Activity Wizard}
+    \hfill
+    \label{fig:packet_tracer2}
+    \end{figure}
+
+    Apart from the settings validation, it also provides the ability to perform connectivity tests between devices by sending a 
+    simple message between them.
+
+    Additionally, through the Activity Wizard, instructions can be included via HTML or a rich text editor which students can then 
+    use as a guide. After configuration is finished a file will be obtained. This file can then be used by students to obtain the 
+    starting network, the necessary instructions and real-time scoring, as points will be added when each of the correct settings are 
+    inserted.
+
+    Packet Tracer also offers a separate interface for applying configurations or services on devices, allowing students to completely skip 
+    the devices' native interface seen in Figure~\ref{fig:packet_tracer3}.
+
+    This feature can be seen as valuable in very early stages of teaching, but quickly becomes counter-productive as students should 
+    grow accustomed to navigating the devices' native interfaces to properly configure them, better preparing them for professional environments.
+
+    \begin{figure}
+        \centering
+        \includegraphics[width=10cm]{3RelatedWork/packet_tracer3.png}
+        \caption{A screenshot of a Packet Tracer's configuration}
+    \hfill
+    \label{fig:packet_tracer3}
+    \end{figure}
+
+    While Packet Tracer is highly accessible and effective for introducing basic networking concepts, it is a closed-source, proprietary tool 
+    designed primarily for Cisco hardware simulation. Its feature set is tailored for entry-level instruction and lacks the extensibility, platform 
+    flexibility, and integration capabilities required for more advanced or automated assessment workflows. For example, Packet Tracer does not support 
+    running custom operating system images or integrating external automation tools via\ac{api}s, which limits its applicability in more complex or 
+    open-ended environments.
+
+    In contrast, this project aims to allow for a more realistic and extensible lab environment. The use of real operating 
+    systems and support of a wide range of vendor platforms for routers and switches, as well as Linux-based\ac{vm}s 
+    is highly desirable.
+
+    Therefore, while Cisco Packet Tracer remains a valuable educational tool, the needs of this project called for a more 
+    flexible and open architecture.

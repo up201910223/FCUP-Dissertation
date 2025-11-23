@@ -1,0 +1,980 @@
+\glsdefs@newdocentry{cs}%
+{%
+name={\acronymfont {\glsentryshort {cs}}},%
+sort={CS},%
+type={acronym},%
+first={CS},%
+firstplural={CSs},%
+text={CS},%
+plural={CSs},%
+description={Computer Science},%
+descriptionplural={Computer Science},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Computer Science},%
+longplural={Computer Sciences},%
+short={CS},%
+shortplural={CSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dcc}%
+{%
+name={\acronymfont {\glsentryshort {dcc}}},%
+sort={DCC},%
+type={acronym},%
+first={DCC},%
+firstplural={DCCs},%
+text={DCC},%
+plural={DCCs},%
+description={FCUP-Department of Computer Science},%
+descriptionplural={FCUP-Department of Computer Science},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={FCUP-Department of Computer Science},%
+longplural={FCUP-Department of Computer Sciences},%
+short={DCC},%
+shortplural={DCCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{gns3}%
+{%
+name={\acronymfont {\glsentryshort {gns3}}},%
+sort={GNS3},%
+type={acronym},%
+first={GNS3},%
+firstplural={GNS3s},%
+text={GNS3},%
+plural={GNS3s},%
+description={Graphical Network Simulator-3},%
+descriptionplural={Graphical Network Simulator-3},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Graphical Network Simulator-3},%
+longplural={Graphical Network Simulator-3s},%
+short={GNS3},%
+shortplural={GNS3s},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{rest}%
+{%
+name={\acronymfont {\glsentryshort {rest}}},%
+sort={REST},%
+type={acronym},%
+first={REST},%
+firstplural={RESTs},%
+text={REST},%
+plural={RESTs},%
+description={Representational State Transfer},%
+descriptionplural={Representational State Transfer},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Representational State Transfer},%
+longplural={Representational State Transfers},%
+short={REST},%
+shortplural={RESTs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{api}%
+{%
+name={\acronymfont {\glsentryshort {api}}},%
+sort={API},%
+type={acronym},%
+first={API},%
+firstplural={APIs},%
+text={API},%
+plural={APIs},%
+description={Application Programming Interface},%
+descriptionplural={Application Programming Interface},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Application Programming Interface},%
+longplural={Application Programming Interfaces},%
+short={API},%
+shortplural={APIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{qemu}%
+{%
+name={\acronymfont {\glsentryshort {qemu}}},%
+sort={QEMU},%
+type={acronym},%
+first={QEMU},%
+firstplural={QEMUs},%
+text={QEMU},%
+plural={QEMUs},%
+description={Quick Emulator},%
+descriptionplural={Quick Emulator},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Quick Emulator},%
+longplural={Quick Emulators},%
+short={QEMU},%
+shortplural={QEMUs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{iou}%
+{%
+name={\acronymfont {\glsentryshort {iou}}},%
+sort={IOU},%
+type={acronym},%
+first={IOU},%
+firstplural={IOUs},%
+text={IOU},%
+plural={IOUs},%
+description={IOS on Unix},%
+descriptionplural={IOS on Unix},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={IOS on Unix},%
+longplural={IOS on Unixs},%
+short={IOU},%
+shortplural={IOUs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ios}%
+{%
+name={\acronymfont {\glsentryshort {ios}}},%
+sort={IOS},%
+type={acronym},%
+first={IOS},%
+firstplural={IOSs},%
+text={IOS},%
+plural={IOSs},%
+description={Internetworking Operating System},%
+descriptionplural={Internetworking Operating System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internetworking Operating System},%
+longplural={Internetworking Operating Systems},%
+short={IOS},%
+shortplural={IOSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{vpcs}%
+{%
+name={\acronymfont {\glsentryshort {vpcs}}},%
+sort={VPCS},%
+type={acronym},%
+first={VPCS},%
+firstplural={VPCSs},%
+text={VPCS},%
+plural={VPCSs},%
+description={Virtual PC Simulator},%
+descriptionplural={Virtual PC Simulator},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual PC Simulator},%
+longplural={Virtual PC Simulators},%
+short={VPCS},%
+shortplural={VPCSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{vm}%
+{%
+name={\acronymfont {\glsentryshort {vm}}},%
+sort={VM},%
+type={acronym},%
+first={VM},%
+firstplural={VMs},%
+text={VM},%
+plural={VMs},%
+description={Virtual Machine},%
+descriptionplural={Virtual Machine},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Machine},%
+longplural={Virtual Machines},%
+short={VM},%
+shortplural={VMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{http}%
+{%
+name={\acronymfont {\glsentryshort {http}}},%
+sort={HTTP},%
+type={acronym},%
+first={HTTP},%
+firstplural={HTTPs},%
+text={HTTP},%
+plural={HTTPs},%
+description={Hypertext Transfer Protocol},%
+descriptionplural={Hypertext Transfer Protocol},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hypertext Transfer Protocol},%
+longplural={Hypertext Transfer Protocols},%
+short={HTTP},%
+shortplural={HTTPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{json}%
+{%
+name={\acronymfont {\glsentryshort {json}}},%
+sort={JSON},%
+type={acronym},%
+first={JSON},%
+firstplural={JSONs},%
+text={JSON},%
+plural={JSONs},%
+description={JavaScript Object Notation},%
+descriptionplural={JavaScript Object Notation},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JavaScript Object Notation},%
+longplural={JavaScript Object Notations},%
+short={JSON},%
+shortplural={JSONs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{wsgi}%
+{%
+name={\acronymfont {\glsentryshort {wsgi}}},%
+sort={WSGI},%
+type={acronym},%
+first={WSGI},%
+firstplural={WSGIs},%
+text={WSGI},%
+plural={WSGIs},%
+description={Web Server Gateway Interface},%
+descriptionplural={Web Server Gateway Interface},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Web Server Gateway Interface},%
+longplural={Web Server Gateway Interfaces},%
+short={WSGI},%
+shortplural={WSGIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{asgi}%
+{%
+name={\acronymfont {\glsentryshort {asgi}}},%
+sort={ASGI},%
+type={acronym},%
+first={ASGI},%
+firstplural={ASGIs},%
+text={ASGI},%
+plural={ASGIs},%
+description={Asynchronous Server Gateway Interface},%
+descriptionplural={Asynchronous Server Gateway Interface},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Asynchronous Server Gateway Interface},%
+longplural={Asynchronous Server Gateway Interfaces},%
+short={ASGI},%
+shortplural={ASGIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{oas}%
+{%
+name={\acronymfont {\glsentryshort {oas}}},%
+sort={OAS},%
+type={acronym},%
+first={OAS},%
+firstplural={OASs},%
+text={OAS},%
+plural={OASs},%
+description={OpenAPI Specification},%
+descriptionplural={OpenAPI Specification},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={OpenAPI Specification},%
+longplural={OpenAPI Specifications},%
+short={OAS},%
+shortplural={OASs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{pve}%
+{%
+name={\acronymfont {\glsentryshort {pve}}},%
+sort={Proxmox VE},%
+type={acronym},%
+first={Proxmox VE},%
+firstplural={Proxmox VEs},%
+text={Proxmox VE},%
+plural={Proxmox VEs},%
+description={Proxmox Virtual Environment},%
+descriptionplural={Proxmox Virtual Environment},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Proxmox Virtual Environment},%
+longplural={Proxmox Virtual Environments},%
+short={Proxmox VE},%
+shortplural={Proxmox VEs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{kvm}%
+{%
+name={\acronymfont {\glsentryshort {kvm}}},%
+sort={KVM},%
+type={acronym},%
+first={KVM},%
+firstplural={KVMs},%
+text={KVM},%
+plural={KVMs},%
+description={Kernel-based Virtual Machine},%
+descriptionplural={Kernel-based Virtual Machine},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Kernel-based Virtual Machine},%
+longplural={Kernel-based Virtual Machines},%
+short={KVM},%
+shortplural={KVMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{lxc}%
+{%
+name={\acronymfont {\glsentryshort {lxc}}},%
+sort={LXC},%
+type={acronym},%
+first={LXC},%
+firstplural={LXCs},%
+text={LXC},%
+plural={LXCs},%
+description={Linux Containers},%
+descriptionplural={Linux Containers},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Linux Containers},%
+longplural={Linux Containerss},%
+short={LXC},%
+shortplural={LXCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{jwt}%
+{%
+name={\acronymfont {\glsentryshort {jwt}}},%
+sort={JWT},%
+type={acronym},%
+first={JWT},%
+firstplural={JWTs},%
+text={JWT},%
+plural={JWTs},%
+description={JSON Web Token},%
+descriptionplural={JSON Web Token},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={JSON Web Token},%
+longplural={JSON Web Tokens},%
+short={JWT},%
+shortplural={JWTs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ldap}%
+{%
+name={\acronymfont {\glsentryshort {ldap}}},%
+sort={LDAP},%
+type={acronym},%
+first={LDAP},%
+firstplural={LDAPs},%
+text={LDAP},%
+plural={LDAPs},%
+description={Lightweight Directory Access Protocol},%
+descriptionplural={Lightweight Directory Access Protocol},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Lightweight Directory Access Protocol},%
+longplural={Lightweight Directory Access Protocols},%
+short={LDAP},%
+shortplural={LDAPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ssh}%
+{%
+name={\acronymfont {\glsentryshort {ssh}}},%
+sort={SSH},%
+type={acronym},%
+first={SSH},%
+firstplural={SSHs},%
+text={SSH},%
+plural={SSHs},%
+description={Secure Shell},%
+descriptionplural={Secure Shell},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Secure Shell},%
+longplural={Secure Shells},%
+short={SSH},%
+shortplural={SSHs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{lvm}%
+{%
+name={\acronymfont {\glsentryshort {lvm}}},%
+sort={LVM},%
+type={acronym},%
+first={LVM},%
+firstplural={LVMs},%
+text={LVM},%
+plural={LVMs},%
+description={Logical Volume Manager},%
+descriptionplural={Logical Volume Manager},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Logical Volume Manager},%
+longplural={Logical Volume Managers},%
+short={LVM},%
+shortplural={LVMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{lvmt}%
+{%
+name={\acronymfont {\glsentryshort {lvmt}}},%
+sort={LVM-Thin},%
+type={acronym},%
+first={LVM-Thin},%
+firstplural={LVM-Thins},%
+text={LVM-Thin},%
+plural={LVM-Thins},%
+description={LVM Thin Provisioning},%
+descriptionplural={LVM Thin Provisioning},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={LVM Thin Provisioning},%
+longplural={LVM Thin Provisionings},%
+short={LVM-Thin},%
+shortplural={LVM-Thins},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cow}%
+{%
+name={\acronymfont {\glsentryshort {cow}}},%
+sort={CoW},%
+type={acronym},%
+first={CoW},%
+firstplural={CoWs},%
+text={CoW},%
+plural={CoWs},%
+description={Copy-on-Write},%
+descriptionplural={Copy-on-Write},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Copy-on-Write},%
+longplural={Copy-on-Writes},%
+short={CoW},%
+shortplural={CoWs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{orm}%
+{%
+name={\acronymfont {\glsentryshort {orm}}},%
+sort={ORM},%
+type={acronym},%
+first={ORM},%
+firstplural={ORMs},%
+text={ORM},%
+plural={ORMs},%
+description={Object-Relational Mapping},%
+descriptionplural={Object-Relational Mapping},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Object-Relational Mapping},%
+longplural={Object-Relational Mappings},%
+short={ORM},%
+shortplural={ORMs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{spice}%
+{%
+name={\acronymfont {\glsentryshort {spice}}},%
+sort={SPICE},%
+type={acronym},%
+first={SPICE},%
+firstplural={SPICEs},%
+text={SPICE},%
+plural={SPICEs},%
+description={Simple Protocol for Independent Computing Environments},%
+descriptionplural={Simple Protocol for Independent Computing Environments},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Simple Protocol for Independent Computing Environments},%
+longplural={Simple Protocol for Independent Computing Environmentss},%
+short={SPICE},%
+shortplural={SPICEs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dry}%
+{%
+name={\acronymfont {\glsentryshort {dry}}},%
+sort={DRY},%
+type={acronym},%
+first={DRY},%
+firstplural={DRYs},%
+text={DRY},%
+plural={DRYs},%
+description={Don't Repeat Yourself},%
+descriptionplural={Don't Repeat Yourself},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Don't Repeat Yourself},%
+longplural={Don't Repeat Yourselfs},%
+short={DRY},%
+shortplural={DRYs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{uuid}%
+{%
+name={\acronymfont {\glsentryshort {uuid}}},%
+sort={UUID},%
+type={acronym},%
+first={UUID},%
+firstplural={UUIDs},%
+text={UUID},%
+plural={UUIDs},%
+description={Universally Unique Identifier},%
+descriptionplural={Universally Unique Identifier},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Universally Unique Identifier},%
+longplural={Universally Unique Identifiers},%
+short={UUID},%
+shortplural={UUIDs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ui}%
+{%
+name={\acronymfont {\glsentryshort {ui}}},%
+sort={UI},%
+type={acronym},%
+first={UI},%
+firstplural={UIs},%
+text={UI},%
+plural={UIs},%
+description={User Interface},%
+descriptionplural={User Interface},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={User Interface},%
+longplural={User Interfaces},%
+short={UI},%
+shortplural={UIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{gui}%
+{%
+name={\acronymfont {\glsentryshort {gui}}},%
+sort={GUI},%
+type={acronym},%
+first={GUI},%
+firstplural={GUIs},%
+text={GUI},%
+plural={GUIs},%
+description={Graphical User Interface},%
+descriptionplural={Graphical User Interface},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Graphical User Interface},%
+longplural={Graphical User Interfaces},%
+short={GUI},%
+shortplural={GUIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cpu}%
+{%
+name={\acronymfont {\glsentryshort {cpu}}},%
+sort={CPU},%
+type={acronym},%
+first={CPU},%
+firstplural={CPUs},%
+text={CPU},%
+plural={CPUs},%
+description={Central Processing Unit},%
+descriptionplural={Central Processing Unit},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Central Processing Unit},%
+longplural={Central Processing Units},%
+short={CPU},%
+shortplural={CPUs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{virl}%
+{%
+name={\acronymfont {\glsentryshort {virl}}},%
+sort={VIRL},%
+type={acronym},%
+first={VIRL},%
+firstplural={VIRLs},%
+text={VIRL},%
+plural={VIRLs},%
+description={Virtual Internet Routing Lab},%
+descriptionplural={Virtual Internet Routing Lab},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Internet Routing Lab},%
+longplural={Virtual Internet Routing Labs},%
+short={VIRL},%
+shortplural={VIRLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{vnc}%
+{%
+name={\acronymfont {\glsentryshort {vnc}}},%
+sort={VNC},%
+type={acronym},%
+first={VNC},%
+firstplural={VNCs},%
+text={VNC},%
+plural={VNCs},%
+description={Virtual Network Computing},%
+descriptionplural={Virtual Network Computing},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Virtual Network Computing},%
+longplural={Virtual Network Computings},%
+short={VNC},%
+shortplural={VNCs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{yaml}%
+{%
+name={\acronymfont {\glsentryshort {yaml}}},%
+sort={YAML},%
+type={acronym},%
+first={YAML},%
+firstplural={YAMLs},%
+text={YAML},%
+plural={YAMLs},%
+description={YAML Ain't Markup Language},%
+descriptionplural={YAML Ain't Markup Language},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={YAML Ain't Markup Language},%
+longplural={YAML Ain't Markup Languages},%
+short={YAML},%
+shortplural={YAMLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ssd}%
+{%
+name={\acronymfont {\glsentryshort {ssd}}},%
+sort={SSD},%
+type={acronym},%
+first={SSD},%
+firstplural={SSDs},%
+text={SSD},%
+plural={SSDs},%
+description={Solid State Drive},%
+descriptionplural={Solid State Drive},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Solid State Drive},%
+longplural={Solid State Drives},%
+short={SSD},%
+shortplural={SSDs},%
+counter={page},%
+parent={},%
+%
+}%
+

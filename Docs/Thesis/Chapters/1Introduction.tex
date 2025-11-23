@@ -1,0 +1,96 @@
+% Chapter Template
+
+% Main chapter title
+%\chapter[toc version]{doc version}
+\chapter{Introduction}
+
+% Short version of the title for the header
+%\chaptermark{version for header}
+
+% Chapter Label
+% For referencing this chapter elsewhere, use \ref{ChapterTemplate}
+\label{Chapter1Introduction}
+
+% Write text in here
+% Use \subsection and \subsubsection to organize text
+
+Network administration remains a fundamental discipline within\ac{cs}, given the central role that networked systems play in the functioning, 
+scalability, and security of modern digital infrastructures.
+
+Modern organizations require professionals who can design, configure, and troubleshoot increasingly complex network environments. 
+Effective education must therefore bridge theoretical knowledge with practical implementation, particularly through hands-on learning 
+that simulates real-world scenarios. Yet current training and assessment methods fail to meet these needs at scale, creating a growing gap 
+between academic preparation and professional requirements.
+
+This project aims to build an initial version of a system capable of assisting training in the topic of network administration, building upon previous 
+work of \citet{santos2024} which solved a series of individual problems relevant to this topic, without building a system out of them.
+
+\section{Need for Automated Assessment}
+
+  Practical assessments are essential to prepare students for real-world challenges, enabling them to apply 
+  theoretical knowledge and develop hands-on skills. However, traditional assessment methods face significant limitations.
+
+  Creating a physical network environment for practical assessments is sure to be costly and challenging to scale for 
+  large student populations. 
+  While emulation and virtualization technologies offer cost-effective alternatives for creating flexible practice environments, 
+  they lack built-in automated assessment capabilities. 
+  Instructors must manually review each students' network assignment configuration—a process that is:
+
+  \begin{itemize}
+    \item \textbf{Time-consuming}: Manual checks grow linearly with class size.
+    \item \textbf{Error-prone}: Human reviewers may overlook misconfigurations.
+    \item \textbf{Risk of inconsistency}: Automated assessment ensures fully deterministic and consistent evaluation.
+  \end{itemize}
+
+  Automating assessments would reduce instructor workload, freeing time for student support as well as ensure consistent, objective grading 
+  and simultaneously enable immediate feedback for learners.
+
+  Previous work by \citet{santos2024} has shown that it is possible to automate the validation of basic network commands, such as verifying 
+  the output of a ping command between a specific machine and a target IP address. This demonstrates that connectivity checks 
+  can be automated, paving the way for network automated assessment.
+
+  \subsection{Limitations of Current Solutions}
+
+    Existing approaches to network education suffer from two critical gaps:
+
+    \begin{enumerate}
+        \item \textbf{Single-vendor focus}: Most tools (e.g., Cisco's Packet Tracer) are designed for specific vendor ecosystems, failing 
+        to prepare students for heterogeneous real-world networks where multi-vendor interoperability is essential.
+        \item \textbf{Missing assessment component}: Some education institutions' curricula, such as our case in\ac{dcc}, forgo practical 
+        assessments entirely, meaning students complete networking exercises without getting feedback or validation. This lack of feedback 
+        can lead to students having gaps in their knowledge, hindering their performance when they join the workforce, as they may not have 
+        acquired sufficient practical skills in the identification and solving of common problems.
+    \end{enumerate}
+
+\section{Aims and Objectives}
+
+  Designing and implementing a system that can automatically evaluate network administration assignments is one of the aims 
+  of this work. It will be utilised as a tool in classes and tests, allowing instructors to spend more time directly helping 
+  and guiding students.
+
+  One of the objectives needed to accomplish this, is to have such a system be able to perform assessments whenever requested 
+  by a student, in a fully automated manner.
+  To have a wide range of support for vendors and device types is also highly desirable as exposing students to as much 
+  variety as possible will better prepare them for more heterogeneous environments of the real world.
+  It will also be important to have assessment for configurations as well as connectivity.
+
+  Another aim of this project is to create a modular and cohesive back-end system out of the components created by 
+  \citet{santos2024}.
+  Achieving this will require further development of the components as well as creating capabilities to communicate between 
+  them.
+
+  
+
+\section{Organization}
+
+  Besides the Introduction, this work includes 6 more chapters:
+
+  \begin{enumerate}
+      \item \textbf{Chapter 2} presents an overview of the system components and underlying technologies.
+      \item \textbf{Chapter 3} reviews related work, highlighting lessons learned and how this project differentiates itself from existing solutions.
+      \item \textbf{Chapter 4} provides a detailed description of the system architecture and its layers. It also outlines the project's functional use cases.
+      \item \textbf{Chapter 5} focuses on implementation details, emphasizing design decisions and their realization.
+      \item \textbf{Chapter 6} discusses performance evaluation results, demonstrating the scalability of solutions introduced in this work.
+      \item \textbf{Chapter 7} gives an overview of met aims and objectives, reviews lessons learned throughout, and goes 
+      over ideas for future work.
+  \end{enumerate}

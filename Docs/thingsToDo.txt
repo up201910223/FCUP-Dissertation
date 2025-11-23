@@ -1,0 +1,26 @@
+
+additional modules
+
+send "ctrl + c" before sending commands and general sanitization of inputs in VMs
+
+switch to netmiko's "send_command_timing" if bug rearises
+
+Regular Expression traceroute
+
+Insert authentication(jwt) in endpoints that should be protected, such as creation and starting, stoping of VMs
+
+make calls to proxmox api more resilient and resistant to errors such as "no worker upid"
+
+switch from sqlite3 to a "real" DB system like PostgreSQL
+
+multiple steps in exercise (sub-alineas, fazer templatevms de uma templatevm com varias pre configurações)
+
+Separate back-end from front-end (CSR and backend json replies)
+
+Make database more complete in terms of evaluation
+
+separate exercise creation from template vm creation
+
+block vm during evaluation
+
+figure out when gns3 project finished importing

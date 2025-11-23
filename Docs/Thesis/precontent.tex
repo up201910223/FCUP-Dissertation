@@ -1,0 +1,246 @@
+
+%-------------------------------------------------------------------------
+%	QUOTATION PAGE
+%-------------------------------------------------------------------------
+%\quotepage{Matt Smith as \emph{The Doctor}, written by Matthew Graham}
+%{
+%	I am and always will be the optimist, the hoper of far-flung hopes and the
+%	dreamer of \newline improbable dreams
+%}
+
+%-------------------------------------------------------------------------
+%	DEDICATORY
+%-------------------------------------------------------------------------
+
+%\begin{dedicatory}
+%	Dedicated to (optional) 
+%\end{dedicatory}
+
+%-------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS PAGE
+%-------------------------------------------------------------------------
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\begin{acknowledgements}
+
+Firstly i would like to thank my friends and family for encouraging me to pursue both my Bachelor's and Master's degrees. 
+Their love and support were fundamental in this endeavor.
+
+Additionally i want to express my sincerest gratitude to my girlfriend Daniela for all the love, support, company, all 
+the time spent playing board games and just being herself, as well as her family for all the support that they give me.
+
+Furthermore i would like to thank my Master's supervisor Professor Rui Prior for allowing me to explore this topic, as well 
+as all the ideas and feedback he gave me during development.
+
+Likewise i would like to thank Instituto de Telecomunicações (UIDB/50008/2020) for hosting this work.
+
+Lastly i would like to thank Ginjas, for just being him.
+
+Thank you.
+
+\vspace*{10cm}
+\newfontfamily\sinhalaFont{Noto Sans Sinhala}
+\tikz[baseline]{
+  \node[opacity=0.05, text=black, font=\sinhalaFont] at (0,0) {ඞ};
+}
+
+\end{acknowledgements}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+%\addvspacetoc{0.3cm} % Add a gap in the Contents, for aesthetics
+
+
+%-------------------------------------------------------------------------
+%	ABSTRACT PAGE (PORTUGUESE)
+%-------------------------------------------------------------------------
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\begin{abstract}[
+	thesistitle={Sistema para Avaliações Práticas de Administração de Redes },
+	title={Resumo},
+	degree={Mestrado em Engenharia de Redes e Sistemas Informáticos},
+	nameconnector={por},
+        keywordsname={Palavras-chave},
+        keywords={ Proxmox VE, GNS3, automação, Nornir, FastAPI, assíncrono, comunicação, emulação, ferramenta de ensino}]
+\begin{otherlanguage}{portuguese}
+
+Os métodos convencionais de formação em rede de computadores, que dependem fortemente do hardware físico, são muitas vezes proibitivamente 
+caros e não são escaláveis. As tecnologias de virtualização e emulação resolvem esta limitação, permitindo a execução 
+simultânea de vários dispositivos simulados numa única máquina. No entanto, a avaliação da correção das configurações dos 
+dispositivos de rede continua a ser um processo manual, propenso a erros, em que configurações incorrectas podem conduzir 
+a falhas críticas em toda a rede.
+
+A primeira fase deste projeto, conduzida por um estudante anterior, centrou-se na investigação da viabilidade de construir um sistema deste 
+tipo e na produção de um conjunto de componentes soltos. Este trabalho representa a segunda fase, focando-se no desenho e implementação de um 
+sistema para avaliação automática de topologias de rede, com suporte para um ambiente de dispositivos heterogéneos, no seguimento direto de um 
+trabalho anterior. O sistema terá como objetivo fornecer um ambiente de trabalho completo para os alunos, uma interface Web para que tanto os 
+alunos como os professores possam interagir com a plataforma e capacidades para automatizar a avaliação das configurações feitas pelos 
+alunos, permitindo que os professores se concentrem no ensino e na orientação dos alunos, em vez de terem de efetuar 
+verificações manuais repetitivas dos trabalhos dos alunos.
+
+Os desenvolvimentos deste projeto incluem a extensão e integração do trabalho anterior, bem como o desenvolvimento de uma 
+aplicação web utilizando FastAPI para alavancar as capacidades de comunicação assíncrona que se revelaram essenciais para 
+garantir que o sistema pode escalar.
+
+
+\end{otherlanguage}
+\end{abstract}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+%-------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%-------------------------------------------------------------------------
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+\begin{abstract} 
+
+Conventional computer network teaching methods, which depend heavily on physical hardware, are often prohibitively expensive and lack scalability. 
+Virtualization and emulation technologies address this limitation by allowing multiple simulated devices to run concurrently 
+on a single system. Nevertheless, assessing the correctness of network device configurations continues to be a manual, 
+error-prone process, where misconfigurations can lead to critical failures across the network.
+
+The first phase of this project, conducted by a previous student, focused on investigating the viability of building such a system and 
+producing a set of loose components. This work represents the second phase,centered on designing and implementing a system for automated assessment 
+of network topologies, designed to support a diverse range of network devices. Building upon previous research, the system aims to deliver a complete, 
+web-based working environment where both students and instructors can interact with the platform. Its key feature is the automation of configuration 
+assessments made by students, which reduces the manual workload for instructors, allowing them to focus more on teaching and guiding 
+rather than repetitive checking of assignments.
+
+The developments of this project include the extension and integration of previous work as well as the development of a web 
+application using FastAPI to leverage asynchronous communication capabilities which proved essential to ensure the system can 
+scale.
+
+
+\end{abstract}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
+%-------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES
+%-------------------------------------------------------------------------
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
+
+\tableofcontents % Write out the Table of Contents
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+\addvspacetoc{0.3cm}
+
+%\listoftables % Write out the List of Tables
+
+\listoffigures % Write out the List of Figures
+
+
+
+%\addvspacetoc{0.3cm}
+
+%-------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%-------------------------------------------------------------------------
+
+%\begin{listofcontants}
+%	\const{My little ponny test of magical rainbow}{$mn/mp$}
+%    {$2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$}
+%   \const{Vaccuum permeability test of magical rainbow for a specific case of
+%   condensed matter physics}
+%   {$\epsilon_0$}{$2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$}
+%	\const{Speed of Light test of magical rainbow}{$c$}
+%    {$2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$}
+%\end{listofcontants}
+
+
+%-------------------------------------------------------------------------
+%	SYMBOLS
+%-------------------------------------------------------------------------
+
+%\begin{listofsymbols}
+%	\symb{$F_{\mu\nu}$}{Maxwell tensor}{F}
+%	\symb{$a$}{distance}{m}
+%	\\
+%	\symb{$\omega$}{angular frequency}{rads$^{-1}$}
+%\end{listofsymbols}
+
+
+%-------------------------------------------------------------------------
+%	NOTATION
+%-------------------------------------------------------------------------
+
+% \newcommand\notationname{Notation and Conventions}
+% \addtotoc{\notationname}
+% \fancyhead[LO]{\textsc{\notationname}}
+
+% \input{Notation}
+
+
+
+%-------------------------------------------------------------------------
+%	ABBREVIATIONS
+%-------------------------------------------------------------------------
+
+\newacronym{cs}{CS}{Computer Science}
+
+\newacronym{dcc}{DCC}{FCUP-Department of Computer Science}
+
+\newacronym{gns3}{GNS3}{Graphical Network Simulator-3}
+
+\newacronym{rest}{REST}{Representational State Transfer}
+
+\newacronym{api}{API}{Application Programming Interface}
+
+\newacronym{qemu}{QEMU}{Quick Emulator}
+
+\newacronym{iou}{IOU}{IOS on Unix}
+
+\newacronym{ios}{IOS}{Internetworking Operating System}
+
+\newacronym{vpcs}{VPCS}{Virtual PC Simulator}
+
+\newacronym{vm}{VM}{Virtual Machine}
+
+\newacronym{http}{HTTP}{Hypertext Transfer Protocol}
+
+\newacronym{json}{JSON}{JavaScript Object Notation}
+
+\newacronym{wsgi}{WSGI}{Web Server Gateway Interface}
+
+\newacronym{asgi}{ASGI}{Asynchronous Server Gateway Interface}
+
+\newacronym{oas}{OAS}{OpenAPI Specification}
+
+\newacronym{pve}{Proxmox VE}{Proxmox Virtual Environment}
+
+\newacronym{kvm}{KVM}{Kernel-based Virtual Machine}
+
+\newacronym{lxc}{LXC}{Linux Containers}
+
+\newacronym{jwt}{JWT}{JSON Web Token}
+
+\newacronym{ldap}{LDAP}{Lightweight Directory Access Protocol}
+
+\newacronym{ssh}{SSH}{Secure Shell}
+
+\newacronym{lvm}{LVM}{Logical Volume Manager}
+
+\newacronym{lvmt}{LVM-Thin}{LVM Thin Provisioning}
+
+\newacronym{cow}{CoW}{Copy-on-Write}
+
+\newacronym{orm}{ORM}{Object-Relational Mapping}
+
+\newacronym{spice}{SPICE}{Simple Protocol for Independent Computing Environments}
+
+\newacronym{dry}{DRY}{Don't Repeat Yourself}
+
+\newacronym{uuid}{UUID}{Universally Unique Identifier}
+
+\newacronym{ui}{UI}{User Interface}
+
+\newacronym{gui}{GUI}{Graphical User Interface}
+
+\newacronym{cpu}{CPU}{Central Processing Unit}
+
+\newacronym{virl}{VIRL}{Virtual Internet Routing Lab}
+
+\newacronym{vnc}{VNC}{Virtual Network Computing}
+
+\newacronym{yaml}{YAML}{YAML Ain't Markup Language}
+
+\newacronym{ssd}{SSD}{Solid State Drive}
+
+
+
+\printglossary[type=\acronymtype,title={List of Abbreviations}]
