@@ -3,7 +3,6 @@
         <a href="{{ url_for('home') }}" class="logo">GNS3 Evaluation</a>
         <a href="{{ url_for('home') }}">Home</a>
         <a href="{{ url_for('check_list_exercises') }}">Exercises</a>
-        
     </div>
 
     <div class="nav-right">
@@ -21,10 +20,11 @@
         justify-content: space-between;
         align-items: center;
         font-family: Arial, Helvetica, sans-serif;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
         position: sticky;
         top: 0;
         z-index: 1000;
+        transition: all 0.3s ease;
     }
 
     .nav-left, .nav-right {
@@ -37,12 +37,13 @@
         text-decoration: none;
         margin-right: 20px;
         font-size: 15px;
+        padding: 6px 0;
         transition: all 0.2s ease;
     }
 
     nav a:hover {
-        text-decoration: underline;
         color: #a9d0f5;
+        text-decoration: underline;
     }
 
     .nav-left a.logo {
@@ -50,6 +51,11 @@
         margin-right: 30px;
         font-size: 18px;
         letter-spacing: 0.5px;
+        transition: color 0.2s ease;
+    }
+
+    .nav-left a.logo:hover {
+        color: #a9d0f5;
     }
 
     .signup-btn {
@@ -57,15 +63,16 @@
         background: #0d74d8;
         border-radius: 5px;
         font-weight: bold;
-        transition: background 0.2s ease;
+        transition: background 0.2s ease, transform 0.2s ease;
     }
 
     .signup-btn:hover {
         background: #0b5fb1;
+        transform: translateY(-1px);
         text-decoration: none;
     }
 
-    /* Responsividade mínima */
+    /* Responsividade */
     @media (max-width: 700px) {
         nav {
             flex-direction: column;
@@ -74,9 +81,14 @@
         .nav-left, .nav-right {
             flex-direction: column;
             width: 100%;
+            margin-bottom: 8px;
         }
         nav a {
-            margin: 5px 0;
+            margin: 6px 0;
+        }
+        .signup-btn {
+            width: 100%;
+            text-align: center;
         }
     }
 </style>

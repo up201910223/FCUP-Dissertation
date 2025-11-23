@@ -1,13 +1,185 @@
-{% extends 'layout.html' %}
+{% extends "layout.html" %}
 
 {% block content %}
-    <div class="card">
-        <h1>{{ title }}</h1>
-        <p>{{ description }}</p>
+<div class="hero">
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+</div>
 
-        <p>
-        Bem-vindo à plataforma de avaliação baseada em GNS3.
-        Aqui podes submeter topologias, consultar resultados e acompanhar o teu desempenho.
-        </p>
+<div class="dashboard-cards">
+
+    <a href="{{ url_for('check_list_exercises') }}" class="card">
+        <div class="card-icon">📚</div>
+        <h2>Exercises</h2>
+        <p>Veja e resolva os exercícios disponíveis.</p>
+    </a>
+
+    <a href="/tasks" class="card">
+        <div class="card-icon">📝</div>
+        <h2>Tasks</h2>
+        <p>Consulte as tarefas atribuídas e os seus detalhes.</p>
+    </a>
+
+    <a href="/submissions" class="card">
+        <div class="card-icon">📤</div>
+        <h2>Submissions</h2>
+        <p>Verifique o histórico de submissões realizadas.</p>
+    </a>
+
+    <a href="/results" class="card">
+        <div class="card-icon">📊</div>
+        <h2>Results</h2>
+        <p>Veja os resultados e estatísticas do seu progresso.</p>
+    </a>
+
+    <div class="card about-card" id="about-card">
+        <div class="card-icon">ℹ️</div>
+        <h2>About</h2>
+        <p>Informações sobre a plataforma.</p>
     </div>
+
+</div>
+
+<!-- Seção expandida About -->
+<div id="about-section">
+    <button id="back-btn">← Back</button>
+    <h1>About GNS3 Evaluation</h1>
+    <p>
+        Esta plataforma permite aos estudantes praticar exercícios, submeter tarefas e acompanhar resultados de forma eficiente. Foi desenvolvida para oferecer uma experiência intuitiva e visualmente apelativa.
+    </p>
+</div>
+
+<style>
+    .hero {
+        text-align: center;
+        padding: 50px 20px;
+        background: #0d74d8;
+        color: white;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        transition: all 0.5s ease;
+    }
+
+    .dashboard-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+        transition: all 0.5s ease;
+    }
+
+    .card {
+        display: block;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #002b55;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .card-icon {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+
+    .card h2 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+    }
+
+    .card p {
+        margin: 0;
+        font-size: 14px;
+        color: #444;
+    }
+
+    /* About Section - inicialmente escondida */
+    #about-section {
+        display: none;
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+        max-width: 800px;
+        margin: 50px auto;
+        opacity: 0;
+        transform: scale(0.95);
+        transition: all 0.5s ease;
+    }
+
+    #about-section.show {
+        display: block;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    #about-section h1 {
+        color: #002b55;
+        margin-bottom: 20px;
+    }
+
+    #about-section p {
+        font-size: 16px;
+        color: #333;
+    }
+
+    #back-btn {
+        background: #0d74d8;
+        color: white;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    #back-btn:hover {
+        background: #0b5fb1;
+        transform: translateY(-1px);
+    }
+</style>
+
+<script>
+    const aboutCard = document.getElementById('about-card');
+    const aboutSection = document.getElementById('about-section');
+    const dashboardCards = document.querySelector('.dashboard-cards');
+    const hero = document.querySelector('.hero');
+    const backBtn = document.getElementById('back-btn');
+
+    aboutCard.addEventListener('click', () => {
+        // animação de esconder Home
+        hero.style.opacity = 0;
+        dashboardCards.style.opacity = 0;
+
+        setTimeout(() => {
+            hero.style.display = 'none';
+            dashboardCards.style.display = 'none';
+            aboutSection.classList.add('show');
+        }, 500);
+    });
+
+    backBtn.addEventListener('click', () => {
+        // esconder About
+        aboutSection.classList.remove('show');
+
+        setTimeout(() => {
+            hero.style.display = 'block';
+            dashboardCards.style.display = 'grid';
+            setTimeout(() => {
+                hero.style.opacity = 1;
+                dashboardCards.style.opacity = 1;
+            }, 500);
+        }, 500);
+    });
+</script>
+
 {% endblock %}
