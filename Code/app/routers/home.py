@@ -14,5 +14,5 @@ templates = Jinja2Templates(directory=str(BASE_DIR / "templates/"))
 @router.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     return templates.TemplateResponse("home.html", {"request": request,
-                                                     "title": "GNS3 - Evaluation platform",
-                                                     "description": "GNS3 - Evaluation platform"})
+                                                     "title": "GNS3 - Evaluation Platform",
+                                                     "description": "GNS3 - Evaluation platform for Network Admin exercises"})
